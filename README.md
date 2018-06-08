@@ -5,25 +5,25 @@
 # Installation
 
 ```sh
-npm install --save next-workbox
+npm install --save @engineerapart/next-workbox
 ```
 or
 
 ```
-yarn add next-workbox
+yarn add @engineerapart/next-workbox
 ```
 
 # Usage
 
-This next.js plugin powered by [next-workbox-webpack-plugin](https://github.com/ragingwind/next-workbox-webpack-plugin). which mean you can use [almost options](https://github.com/ragingwind/next-workbox-webpack-plugin#usage) on the webpack plugin except `distDir` and `buildId`. The two of options will be overwriten and handled in this next.js plugin.
+This next.js plugin powered by [next-workbox-webpack-plugin](https://github.com/engineerapart/next-workbox-webpack-plugin). which mean you can use [almost options](https://github.com/engineerapart/next-workbox-webpack-plugin#usage) on the webpack plugin except `distDir` and `buildId`. The two of options will be overwriten and handled in this next.js plugin.
 
 ```js
 // next.config.js
-const withWorkbox = require('next-workbox')
+const withWorkbox = require('@engineerapart/next-workbox')
 
 module.exports = withWorkbox({
     workbox: {
-      // https://github.com/ragingwind/next-workbox-webpack-plugin#usage
+      // https://github.com/engineerapart/next-workbox-webpack-plugin#usage
       ...webpackOptions,
       // register server worker script with default value or your own content
       registerSW: true // boolean or string
@@ -64,7 +64,7 @@ alternative method is that you can set the option to append register service wor
 
 ```js
 // next.config.js
-const withWorkbox = require('next-workbox')
+const withWorkbox = require('@engineerapart/next-workbox')
 
 module.exports = withWorkbox({
   workbox: {
@@ -77,7 +77,7 @@ or with string content
 
 ```js
 // next.config.js
-const withWorkbox = require('next-workbox')
+const withWorkbox = require('@engineerapart/next-workbox')
 
 module.exports = withWorkbox({
   workbox: {
@@ -91,7 +91,7 @@ You can also provide an options object to the register script that will generate
 
 ```js
 // next.config.js
-const withWorkbox = require('next-workbox')
+const withWorkbox = require('@engineerapart/next-workbox')
 
 module.exports = withWorkbox({
   workbox: {
@@ -133,3 +133,4 @@ If you want to have changes of those, you can use your own regster script for. I
 ## License
 
 MIT © [Jimmy Moon](https://ragingwind.me)
+MIT © [EngineerApart, LLC](https://engineerapart.com)
