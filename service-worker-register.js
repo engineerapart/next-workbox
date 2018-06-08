@@ -20,13 +20,14 @@ const allowsSW = Boolean(window.location.protocol === 'https:' ||
 
 window.addEventListener('load', function() {
   if ('serviceWorker' in navigator && allowsSW) {
-    navigator.serviceWorker.register('${src}', {scope: '${scope}'})
+    navigator.serviceWorker
+      .register('${src}', {scope: '${scope}'})
       .then(function(registration) {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
 
-        registration.onupdatefound = () => {
+        registration.onupdatefound = function() {
           const installingWorker = registration.installing;
-          installingWorker.onstatechange = () => {
+          installingWorker.onstatechange = function() {
             if (installingWorker.state === 'installed') {
               if (navigator.serviceWorker.controller) {
                 console.log('New content is available; please refresh.');
