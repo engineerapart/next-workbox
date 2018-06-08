@@ -1,6 +1,6 @@
 {
 	"name": "@engineerapart/next-workbox",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"description": "Next.js plugins for workbox and PWA",
 	"license": "MIT",
 	"repository": "https://github.com/engineerapart/next-workbox",
@@ -27,7 +27,7 @@
 		"next-plugins"
 	],
 	"dependencies": {
-		"@engineerapart/next-workbox-webpack-plugin": "^1.1.2",
+		"@engineerapart/next-workbox-webpack-plugin": "^1.1.7",
 		"find-cache-dir": "^1.0.0"
 	},
 	"peerDependencies": {
