@@ -60,7 +60,7 @@ module.exports = (nextConfig = {}) => {
       const workboxOptions = { ...defaultWorkbox, ...workbox }
       const { registerSW, registerScope, includeDev, ...workboxConfig } = workboxOptions
 
-      if ((!isServer && !dev) || includeDev) {
+      if (!isServer && (!dev || includeDev)) {
         // append server-worker register script to main.js chunk
         if (registerSW) {
           let content = typeof registerSW === 'string' ? registerSW : '';
@@ -75,6 +75,8 @@ module.exports = (nextConfig = {}) => {
           ...workboxConfig,
           distDir: join(dir, distDir),
           buildId,
+          dev,
+          includeDev,
         }))
       }
 
