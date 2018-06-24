@@ -26,7 +26,9 @@ module.exports = withWorkbox({
       // https://github.com/engineerapart/next-workbox-webpack-plugin#usage
       ...webpackOptions,
       // register server worker script with default value or your own content
-      registerSW: true // boolean or string
+      registerSW: true, // boolean or string
+      // Allow SW to be registered on build even on dev builds
+      includeDev: false, // default false
     }
 })
 ```

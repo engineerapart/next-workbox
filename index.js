@@ -11,6 +11,7 @@ const defaultRegisterSW = {
 
 const defaultWorkbox = {
   registerScope: defaultRegisterSW,
+  includeDev: false,
 }
 
 const appendRegisterSW = (entry, content) => {
@@ -57,10 +58,9 @@ module.exports = (nextConfig = {}) => {
       } = nextConfig
 
       const workboxOptions = { ...defaultWorkbox, ...workbox }
+      const { registerSW, registerScope, includeDev, ...workboxConfig } = workboxOptions
 
-      if (!isServer && !dev) {
-        const { registerSW, registerScope, ...workboxConfig } = workboxOptions
-
+      if ((!isServer && !dev) || includeDev) {
         // append server-worker register script to main.js chunk
         if (registerSW) {
           let content = typeof registerSW === 'string' ? registerSW : '';

@@ -1,38 +1,38 @@
 {
-	"name": "@engineerapart/next-workbox",
-	"version": "1.4.7",
-	"description": "Next.js plugins for workbox and PWA",
-	"license": "MIT",
-	"repository": "https://github.com/engineerapart/next-workbox",
-	"author": {
-		"name": "Engineer Apart",
-		"email": "info@engineerapart.com",
-		"url": "https://engineerapart.com"
-	},
-	"engines": {
-		"node": ">=8.4"
-	},
-	"scripts": {},
-	"files": [
-		"index.js",
-		"service-worker-register.js",
-		"service-worker.js"
-	],
-	"keywords": [
-		"next",
-		"next-workbox",
-		"workbox",
-		"pwa",
-		"progressive web app",
-		"next-plugins"
-	],
-	"dependencies": {
-		"@engineerapart/next-workbox-webpack-plugin": "^1.1.10",
-		"find-cache-dir": "^1.0.0"
-	},
-	"peerDependencies": {
-		"next": ">=5.0.0",
-		"react": "^16.2.0",
-		"react-dom": "^16.2.0"
-	}
+  "name": "@engineerapart/next-workbox",
+  "version": "1.4.8",
+  "description": "Next.js plugins for workbox and PWA",
+  "license": "MIT",
+  "repository": "https://github.com/engineerapart/next-workbox",
+  "author": {
+    "name": "Engineer Apart",
+    "email": "info@engineerapart.com",
+    "url": "https://engineerapart.com"
+  },
+  "engines": {
+    "node": ">=8.4"
+  },
+  "scripts": {},
+  "files": [
+    "index.js",
+    "service-worker-register.js",
+    "service-worker.js"
+  ],
+  "keywords": [
+    "next",
+    "next-workbox",
+    "workbox",
+    "pwa",
+    "progressive web app",
+    "next-plugins"
+  ],
+  "dependencies": {
+    "@engineerapart/next-workbox-webpack-plugin": "^1.1.10",
+    "find-cache-dir": "^1.0.0"
+  },
+  "peerDependencies": {
+    "next": ">=5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }
